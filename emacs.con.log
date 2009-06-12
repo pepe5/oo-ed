@@ -6,22 +6,64 @@
 Initialized empty Git repository in /root/text/ooo-ed/.git/
 
 >$ git add .
->$ git add *
->$ git commit -m '1st'
-Created initial commit 40c85f5: 1st
- 3 files changed, 15 insertions(+), 0 deletions(-)
+>$ git add emacs.con.log
+>$ git commit -m 'starting real (rb) files'
+Created initial commit 9e54dfe: starting real (rb) files
+ 4 files changed, 59 insertions(+), 0 deletions(-)
+ create mode 100644 #emacs.con.log#
  create mode 120000 .#emacs.con.log
  create mode 100644 emacs.con.log
  create mode 100644 emacs.con.log~
 
 >$ git remote add origin git@github.com:pepe5/ooo-ed.git
+>$ git pull origin master
+warning: no common commits
+remote: Counting objects: 3, done.
+remote: Total 3 (delta 0), reused 0 (delta 0)
+Unpacking objects: 100% (3/3), done.
+From git@github.com:pepe5/ooo-ed
+ * branch            master     -> FETCH_HEAD
+Merge made by recursive.
+ README |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+ create mode 100644 README
+
 >$ git push origin master
+Counting objects: 9, done.
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (8/8), 1.09 KiB, done.
+Total 8 (delta 2), reused 0 (delta 0)
 To git@github.com:pepe5/ooo-ed.git
- ! [rejected]        master -> master (non-fast forward)
-error: failed to push some refs to 'git@github.com:pepe5/ooo-ed.git'
+   bf10b76..295fb58  master -> master
+
+!> rm -rf .git
 
 >$ git init
 Initialized empty Git repository in /root/text/ooo-ed/.git/
 
 >$ git add .
+>$ git add emacs.con.log
+
+>$ git remote add origin git@github.com:pepe5/ooo-ed.git
+>$ git pull origin master
+warning: no common commits
+remote: Counting objects: 11, done.
+remote: Compressing objects: 100% (8/8), done.
+remote: Total 11 (delta 2), reused 0 (delta 0)
+Unpacking objects: 100% (11/11), done.
+From git@github.com:pepe5/ooo-ed
+ * branch            master     -> FETCH_HEAD
+remote: Compressing objects:  50% (4/8)   
+remote: Compressing objects:  37% (3/8)   
+
+>$ git commit -m 'starting real (rb) files'
+# On branch master
+# Changed but not updated:
+#   (use "git add <file>..." to update what will be committed)
+#
+#       modified:   emacs.con.log
+#       modified:   emacs.con.log~
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+
 >$ 
