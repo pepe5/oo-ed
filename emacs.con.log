@@ -41,9 +41,6 @@ To git@github.com:pepe5/ooo-ed.git
 >$ git init
 Initialized empty Git repository in /root/text/ooo-ed/.git/
 
->$ git add .
->$ git add emacs.con.log
-
 >$ git remote add origin git@github.com:pepe5/ooo-ed.git
 >$ git pull origin master
 warning: no common commits
@@ -56,14 +53,57 @@ From git@github.com:pepe5/ooo-ed
 remote: Compressing objects:  50% (4/8)   
 remote: Compressing objects:  37% (3/8)   
 
+>$ git add .
+>$ git add emacs.con.log
 >$ git commit -m 'starting real (rb) files'
-# On branch master
-# Changed but not updated:
-#   (use "git add <file>..." to update what will be committed)
-#
-#       modified:   emacs.con.log
-#       modified:   emacs.con.log~
-#
-no changes added to commit (use "git add" and/or "git commit -a")
+Created commit bfe7239: starting real (rb) files
+ 3 files changed, 153 insertions(+), 13 deletions(-)
 
+>$ git push origin master
+Counting objects: 9, done.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 1.14 KiB, done.
+Total 5 (delta 3), reused 0 (delta 0)
+To git@github.com:pepe5/ooo-ed.git
+   295fb58..bfe7239  master -> master
+
+>$ git log
+commit bfe7239915b5e291e1bac45255dc898cb9fa736b
+Author: root <root@andLinux.(none)>
+Date:   Fri Jun 12 13:13:06 2009 -0400
+    starting real (rb) files
+commit 295fb58816b03ebf34b2a154e785d927a64c3b21
+Merge: 9e54dfe... bf10b76...
+Author: root <root@andLinux.(none)>
+Date:   Fri Jun 12 13:08:43 2009 -0400
+    Merge branch 'master' of git@github.com:pepe5/ooo-ed
+commit 9e54dfec4c2d9e1ed62ffe33bab6a338f7e2e946
+Author: root <root@andLinux.(none)>
+Date:   Fri Jun 12 13:06:35 2009 -0400
+    starting real (rb) files
+commit bf10b76df935e880b3fd75e4301daf9c1b48a196
+Author: root <root@andLinux.(none)>
+Date:   Tue May 26 18:05:05 2009 -0400
+    1st commit
+
+>$ git add slurp.rb
+>$ git commit -m 'slurp (rb)'
+Created commit e9f792e: slurp (rb)
+ 1 files changed, 2 insertions(+), 0 deletions(-)
+ create mode 100644 slurp.rb
+
+>$ git push origin master
+Counting objects: 4, done.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 311 bytes, done.
+Total 3 (delta 1), reused 0 (delta 0)
+To git@github.com:pepe5/ooo-ed.git
+   bfe7239..e9f792e  master -> master
+
+>$ git commit -a 'con.log |<+ slurp (rb)'
+fatal: Paths with -a does not make sense.
+
+>$ echo $EDITOR
+
+>$ export EDITOR=emacsclient
 >$ 
