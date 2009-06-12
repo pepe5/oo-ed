@@ -1,0 +1,5 @@
+[root@andLinux ~]# TERM=ansi; PS1='>$ '; stty cols 999                                                          
+>$ pushd text/ooo-ed/
+~/text/ooo-ed ~
+
+>$ 

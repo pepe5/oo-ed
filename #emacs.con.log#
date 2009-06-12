@@ -1,0 +1,26 @@
+[root@andLinux ~]# TERM=ansi; PS1='>$ '; stty cols 999                                                          
+>$ pushd text/ooo-ed/
+~/text/ooo-ed ~
+
+>$ git init
+Initialized empty Git repository in /root/text/ooo-ed/.git/
+
+>$ git add .
+>$ git add *
+>$ git commit -m '1st'
+Created initial commit 40c85f5: 1st
+ 3 files changed, 15 insertions(+), 0 deletions(-)
+ create mode 120000 .#emacs.con.log
+ create mode 100644 emacs.con.log
+ create mode 100644 emacs.con.log~
+
+>$ git remote add origin git@github.com:pepe5/ooo-ed.git
+>$ git push origin master
+To git@github.com:pepe5/ooo-ed.git
+ ! [rejected]        master -> master (non-fast forward)
+error: failed to push some refs to 'git@github.com:pepe5/ooo-ed.git'
+
+>$ git init
+Initialized empty Git repository in /root/text/ooo-ed/.git/
+
+>$ git add .
