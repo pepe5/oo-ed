@@ -106,4 +106,17 @@ fatal: Paths with -a does not make sense.
 >$ echo $EDITOR
 
 >$ export EDITOR=emacsclient
+>$ git commit -a
+Waiting for Emacs...
+Created commit 0c418b8: slurp @ con.log?
+ 2 files changed, 103 insertions(+), 24 deletions(-)
+
+>$ git push origin master
+Counting objects: 7, done.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 976 bytes, done.
+Total 4 (delta 3), reused 0 (delta 0)
+To git@github.com:pepe5/ooo-ed.git
+   e9f792e..0c418b8  master -> master
+
 >$ 
