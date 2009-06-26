@@ -64,7 +64,23 @@ To git@github.com:pepe5/ooo-ed.git
    90f3c67..b237e98  master -> master
 
 >$ git add .
+>$ git commit -a
+Waiting for Emacs...
+Created commit dfaaae1: jruby_hello ini commit again
+ 6 files changed, 149 insertions(+), 0 deletions(-)
+ create mode 120000 .#jruby_hello.git.con.log
+ create mode 100644 jruby_hello.git.con.log
+ create mode 100644 jruby_hello.git.con.log~
+ create mode 100755 jruby_hello_world_example.rb
+ create mode 120000 ooo-ed
+ create mode 100644 slurp.rb~
+
 >$ git push origin master
-Everything up-to-date
+Counting objects: 9, done.
+Compressing objects: 100% (4/4), done.
+ b237e98..dfaaae1  master -> master,
+
+>$ git commit -a
+Waiting for Emacs...
 
 >$ 

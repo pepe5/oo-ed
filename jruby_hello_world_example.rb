@@ -1,6 +1,17 @@
 # //blogs.sun.com/GullFOSS/entry/the_jruby_hello_world_example
 require 'java'
 
+# load-cp uno-jar/s
+cascade =
+  ['/usr/share/java/openoffice/',
+   'c:/Program Files/OpenOffice.org 3/URE/java/',
+   'c:/Program Files/OpenOffice.org 3/Basis/program/classes/']
+jars =
+  ['ridl.jar', # XUnoUrlResolver, XComponentContext, XPropertySet
+   'unoil.jar ?'] # XComponentLoader, XTextDocument
+
+jars .each {|jar| cascade .selectFirst {|path| require path+jar} }
+
 # some uno type definitions for UnoRuntime.queryInterface(java class, object)
 resolvertype = com.sun.star.bridge.XUnoUrlResolver
 loadertype = com.sun.star.frame.XComponentLoader
