@@ -1,0 +1,70 @@
+>$ pushd ~/text/ooo-ed/
+~/text/ooo-ed /mnt/win/temp/uc 2008 /mnt/win/temp /usr/share/emacs/23.0.60/lisp
+
+>$ git commit -a
+  GNU nano 2.0.7 File: .git/COMMIT_EDITMSG
+# Please enter the commit message for your changes.
+# (Comment lines starting with '#' will not be included)
+#
+# Committer: root <root@andLinux.(none)>
+#
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#deleted:    #emacs.con.log#
+#deleted:    .#emacs.con.log
+#modified:   emacs.con.log
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#.#jruby_hello.git.con.log
+#jruby_hello.git.con.log
+#jruby_hello.git.con.log~
+#jruby_hello_world_example.rb
+#ooo-ed
+#slurp.rb~
+
+>$ export EDITOR=emacsclient
+>$ git commit -a
+Waiting for Emacs...
+Created commit 8f6c86a: jruby_hello initial commit
+ 3 files changed, 13 insertions(+), 110 deletions(-)
+ delete mode 100644 #emacs.con.log#
+ delete mode 120000 .#emacs.con.log
+
+>$ git push git@github.com:pepe5/ooo-ed.git master
+To git@github.com:pepe5/ooo-ed.git
+ ! [rejected]        master -> master (non-fast forward)
+error: failed to push some refs to 'git@github.com:pepe5/ooo-ed.git'
+
+>$ git push origin master
+To git@github.com:pepe5/ooo-ed.git
+ ! [rejected]        master -> master (non-fast forward)
+error: failed to push some refs to 'git@github.com:pepe5/ooo-ed.git'
+
+>$ git pull origin master
+remote: Counting objects: 8, done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 6 (delta 3), reused 0 (delta 0)
+Unpacking objects: 100% (6/6), done.
+From git@github.com:pepe5/ooo-ed
+ * branch            master     -> FETCH_HEAD
+Merge made by recursive.
+ slurp.rb |   13 +++++++++++--
+ 1 files changed, 11 insertions(+), 2 deletions(-)
+
+>$ git push origin master
+Counting objects: 8, done.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 746 bytes, done.
+Total 5 (delta 3), reused 0 (delta 0)
+To git@github.com:pepe5/ooo-ed.git
+   90f3c67..b237e98  master -> master
+
+>$ git add .
+>$ git push origin master
+Everything up-to-date
+
+>$ 
